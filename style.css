@@ -3,16 +3,26 @@ html {
   width: 100%;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+}
+
 .navBar {
   background-color: #f2f4eb;
+  font-family: "Roboto Slab", serif;
 }
 
 .navBar,
 ul {
   display: flex;
-  float: right;
   list-style: none;
   font-size: 32px;
+}
+
+.navbar-brand{
+  font-family: "Roboto Slab", serif;
 }
 
 .navBar,
@@ -20,8 +30,8 @@ li,
 a {
   display: flex;
   align-items: center;
-  padding: 5px 5px 5px 5px;
-  transition: all 0.3s ease 0s;
+  padding: 5px;
+  transition: all 0.3s ease;
   text-decoration: none;
   margin: 10px;
 }
@@ -40,28 +50,45 @@ li {
   left: 0;
   bottom: 0;
   width: 100%;
-  /* background-color: white; */
   text-align: center;
   height: 50px;
 }
 
-.intro {
-  font-family: 'Young Serif', serif;
-  font-size: 20px;
-  width: 500px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border: 20px solid #f2f4eb;
-  margin-top: 20px;
+.intro-center {
   text-align: center;
+  padding: 50px;
 }
 
-.h1 {
+/* .intro{
+  font-family: "Roboto Slab", serif;
+  font-size: 19px;
+  max-width: 800px;
+  border: 20px solid #f2f4eb; 
+  margin-top: 20px;
+  margin: auto;
+}  */
+
+.stories-h1, .intro{
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 19px;
+  max-width: 800px;
+  border: 20px solid #f2f4eb; 
+  margin-top: 20px;
+  margin: auto;
+}
+
+.content {
   display: flex;
   justify-content: center;
+  text-align: center;
+  padding: 50px
 }
+
+/* .h1 {
+  display: flex;
+  justify-content: center;
+} */
 
 .photo1,
 .photo2 {
@@ -71,11 +98,16 @@ li {
   padding-bottom: 5px;
   width: 600px;
   height: 400px;
+  max-width: 100%;
+  height: auto;
+  padding: 5px;
 }
 
 .photos {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .buttons {
@@ -92,7 +124,6 @@ li {
 
 .petition-container {
   display: flex;
-  /* flex-direction: row; */
   gap: 20px;
   margin: auto;
   width: 50%;
@@ -116,10 +147,7 @@ li {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 .dark-mode {
@@ -127,9 +155,17 @@ li {
   color: white;
 }
 
+.dark-mode .navbar,
+.dark-mode .footer,
+.dark-mode .btn-outline-secondary {
+  background: #333;
+  color: white;
+}
+
 #petition-form {
   display: flex;
   justify-content : center;
+  padding: 10px;
 }
 
 .revealable {
@@ -142,7 +178,7 @@ li {
 .revealable.active {
   transform: translateY(0px);
   opacity: 1;
-}
+} 
 
 /* the modal that covers the background and prevents user interactions */
 .modal {
@@ -194,7 +230,7 @@ li {
 
 /* Stories */
 .stories-1 {
-  font-family: 'Young Serif', serif;
+  font-family: "Roboto Slab", serif;;
   font-size: 15px;
   width: 500px;
   padding-left: 25px;
